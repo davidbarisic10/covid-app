@@ -7,10 +7,10 @@ import {
   Card,
   CardContent,
 } from "@material-ui/core";
-import InfoBox from "./InfoBox";
-import LineGraph from "./LineGraph";
-import Table from "./Table";
-import { sortData, prettyPrintStat } from "./util";
+import InfoBox from "./components/InfoBox";
+import LineGraph from "./components/LineGraph";
+import Table from "./components/Table";
+import { sortData, prettyPrintStat } from "./utils/util";
 import numeral from "numeral";
 import "leaflet/dist/leaflet.css";
 
@@ -50,8 +50,6 @@ const App = () => {
 
     getCountriesData();
   }, []);
-
-  console.log(casesType);
 
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;
